@@ -12,7 +12,7 @@ public class HotelManagementService {
     private HotelManagementRepository repository = new HotelManagementRepository();
 
     public String addHotel(Hotel hotel) {
-        if(hotel.equals(null) || hotel.getHotelName().equals(null)) return "FAILURE";
+        if(hotel.equals(null) || hotel.getHotelName().equals("")) return "FAILURE";
         return repository.addHotel(hotel);
     }
 
